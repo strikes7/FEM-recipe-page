@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background-color: hsl(30, 54%, 90%);
+  font-family: "Outfit", sans-serif;
+}
+
+p {
+  line-height: 1.4;
+  color: hsl(30, 10%, 34%);
+}
+
+.recipe {
+  position: relative;
+  max-width: 46.25rem;
+  padding: clamp(2rem, 6vw, 2.5rem) clamp(2rem, 6vw, 2.5rem) 1.4375rem;
+  margin-block-start: 7.625rem;
+  margin-inline: auto;
+  border-radius: 1.375rem;
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+}
+.recipe__thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 0.6rem;
+}
+.recipe__title {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: 2.625rem;
+  color: hsl(24, 5%, 18%);
+}
+.recipe__preparation-time {
+  margin-block-start: 1.7rem;
+  padding: 1.75rem;
+  border-radius: 0.6rem;
+  background-color: hsl(330, 100%, 98%);
+}
+.recipe__preparation-time__title {
+  margin-block: 0 1.1rem;
+  color: hsl(332, 51%, 32%);
+  font-weight: 600;
+  line-height: 1;
+}
+.recipe__preparation-time__categories {
+  margin-block-end: 0;
+}
+.recipe__preparation-time__categories > li > p {
+  margin-block: 0.4rem;
+  margin-inline-start: 0.75rem;
+}
+.recipe__ingredients {
+  padding-block-end: 0.9rem;
+  border-block-end: 1px solid hsl(30, 18%, 87%);
+}
+.recipe__ingredients__title {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: hsl(14, 45%, 36%);
+  margin-block-end: 1rem;
+}
+.recipe__ingredients__list > li::marker {
+  color: hsl(14, 45%, 36%);
+}
+.recipe__ingredients__list > li > p {
+  margin-block: 0.4rem;
+  margin-inline-start: 0.75rem;
+}
+.recipe__instructions {
+  padding-block-end: 0.9rem;
+  border-block-end: 1px solid hsl(30, 18%, 87%);
+}
+.recipe__instructions__title {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: hsl(14, 45%, 36%);
+  margin-block-end: 1rem;
+}
+.recipe__instructions__list > li::marker {
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
+}
+.recipe__nutrition__title {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: hsl(14, 45%, 36%);
+  margin-block-end: 1rem;
+}
+.recipe__preparation-time__categories > li > p, .recipe__ingredients__list > li > p {
+  margin-inline-start: 1rem;
+}
+.recipe__instructions__list > li > p {
+  margin-inline-start: 0.75rem;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.nutrition-table__row:not(:last-child) {
+  border-block-end: 1px solid hsl(30, 18%, 87%);
+}
+.nutrition-table__celd {
+  padding-block: 0.85rem;
+  line-height: 1;
+}
+.nutrition-table__celd:nth-child(1) {
+  width: 45%;
+  padding-inline-start: 2rem;
+}
+.nutrition-table__celd:nth-child(2) {
+  color: hsl(14, 45%, 36%);
+  font-weight: 700;
+}

@@ -1,0 +1,119 @@
+@use "../abstract/" as *;
+
+.recipe{
+    position: relative;
+    max-width: toRem(740);
+    padding: clamp(2rem, 6vw, 2.5rem ) clamp(2rem, 6vw, 2.5rem ) toRem(23);
+    margin-block-start: toRem(122);
+    margin-inline: auto;
+    border-radius: toRem(22);
+    background-color: $clr-neutral-100;
+    overflow: hidden;
+    
+    &__thumbnail{
+        width: 100%;
+        height: auto;
+        border-radius: .6rem;
+    }
+
+    &__title{
+        @include title;
+        font-size:$fs-700 ;
+        color: $clr-neutral-600;
+    }
+
+    &__preparation-time{
+        margin-block-start: 1.7rem;
+        padding: toRem(28);
+        border-radius: .6rem;
+        background-color: $clr-neutral-200;
+
+        &__title{
+            margin-block: 0 1.1rem;
+            color: $clr-primary-200;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        &__categories {
+            margin-block-end: 0;
+            & > li{
+                & > p {
+                    @include paragraph-margin;
+                }
+            }
+        }
+    }
+
+    &__ingredients {
+        @include bottom-article;
+
+        &__title{
+            @include title;
+            @include sub-title;
+        }
+
+        &__list > li{
+            &::marker{
+                @include marker-color;
+            }
+            & > p{
+                @include paragraph-margin;
+            }
+        } 
+    }
+
+    &__instructions{
+        @include bottom-article;
+
+        &__title{
+            @include title;
+            @include sub-title;
+        }
+
+        &__list > li{
+            &::marker{
+                @include marker-color;
+                font-weight: 700;
+            }
+        } 
+    }
+
+    &__nutrition{
+        &__title {
+            @include title;
+            @include sub-title;
+        }
+    }
+
+    &__preparation-time__categories>li > p,
+    &__ingredients__list > li > p{
+        margin-inline-start: 1rem;
+    }
+
+    &__instructions__list > li > p{
+        margin-inline-start: .75rem;
+    }
+}
+
+.nutrition-table{
+    width: 100%;
+    border-collapse: collapse;
+
+    &__row:not(:last-child){
+        border-block-end: 1px solid $clr-neutral-400;
+    }
+    &__celd{
+        padding-block: .85rem;
+        line-height: 1;
+        
+        &:nth-child(1){
+            width: 45%;
+            padding-inline-start: 2rem;
+        }
+        &:nth-child(2){
+            color: $clr-primary-100;
+            font-weight: 700;
+        }
+    }
+}

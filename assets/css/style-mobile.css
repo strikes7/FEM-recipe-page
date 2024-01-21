@@ -1,0 +1,16 @@
+.recipe {
+  margin-block-start: 0;
+  border-radius: 0;
+}
+.recipe__thumbnail {
+  position: relative;
+  border-radius: 0;
+  width: calc(100% + clamp(4rem, 22vw, 5rem));
+  left: -2.5rem;
+  top: -2.5rem;
+}
+.recipe__title {
+  margin-block-start: -0.5rem;
+  font-size: 2rem;
+  line-height: 1.1;
+}

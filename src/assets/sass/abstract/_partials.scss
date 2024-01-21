@@ -1,0 +1,27 @@
+@use "colors" as *;
+@use "fonts" as *;
+
+@mixin bottom-article{
+  padding-block-end: .9rem;
+  border-block-end: 1px solid $clr-neutral-400;
+}
+
+@mixin title{
+  font-family: $ff-title;
+  font-weight: 400;
+}
+
+@mixin sub-title{
+  font-size: $fs-600;
+  color: $clr-primary-100;
+  margin-block-end: 1rem;
+}
+
+@mixin marker-color{
+  color: $clr-primary-100;
+}
+
+@mixin paragraph-margin {
+  margin-block: .4rem;
+  margin-inline-start: .75rem;
+}
